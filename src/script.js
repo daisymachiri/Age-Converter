@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const shareData = {
             title: 'Check out my age and zodiac sign!',
             text: resultPara.textContent,
-            url: 'https://collegevidya.com/tool/age-calculator/',
+            url: 'https://main--ageconverterbydaisy.netlify.app/',
         };
 
         if (navigator.share) {
