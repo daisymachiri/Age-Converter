@@ -10,13 +10,22 @@ body {
   text-align: center;
   padding: 20px;
 }
+h1 {
+  font-size: 36px; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the text bold */
+  color: #333; /* Set the text color */
+  margin-bottom: 20px; /* Add some space below the heading */
+  text-align: center; /* Center align the heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
 
 .age-info,
 .result-info {
   width: calc(50% - 10px);
   box-sizing: border-box;
   border: 1px solid #dd2476;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 20px;
   background-color: #ff9e9e;
 }
@@ -83,5 +92,52 @@ button:hover {
 button:focus {
   outline: none;
   box-shadow: 0 0 8px rgba(221, 36, 118, 0.5);
+}
+#result {
+  font-size: 20px; 
+  color: #1b0303; 
+  margin-top: 20px;
+}
+footer p {
+  font-style: italic;
+  text-align: center;
+}
+.age-info {
+  text-align: center;
+}
+
+.result-info {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .age-info,
+  .result-info {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  input[type="text"],
+  input[type="date"] {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  button {
+    padding: 8px 16px;
+  }
 }
 

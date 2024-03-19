@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <title>Age Converter</title>
   <link rel="stylesheet" href="src/style.css">
 </head>
@@ -14,16 +15,19 @@
     <input type="text" id="name">
     <label for="birthdate">Enter Your BirthDate:</label>
     <input type="date" id="birthdate" min="1900-01-01" max="2024-12-31">
-    <button onclick="calculateAge()">Calculate</button>
+    <button id="calculate">Calculate</button>
     </div>
     <div class="result-info">
     <div id="result"></div>
     <div id="zodiacSign"></div>
     <div id="progressBar"></div>
-    <button>Share</button>
+    <button id="share"><i class="fas fa-share"> Share</i></button>
     <p class="result"></p>
   </div>
   </div>
+  <footer>
+    <p>&copy; 2024 Daisy Machiri. All rights reserved.</p>
+  </footer>
   <script src="src/script.js"></script>
 </body>
 </html>
