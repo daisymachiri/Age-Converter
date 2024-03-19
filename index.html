@@ -8,18 +8,22 @@
 </head>
 <body>
   <div class="container">
-    <h1>Age Converter</h1>
-    <label for="name">Enter your name:</label>
+    <div class="age-info">
+    <h1>AGE CONVERTER</h1>
+    <label for="name">Enter Your Name:</label>
     <input type="text" id="name">
-    <label for="birthdate">Enter your birthdate:</label>
+    <label for="birthdate">Enter Your BirthDate:</label>
     <input type="date" id="birthdate" min="1900-01-01" max="2024-12-31">
     <button onclick="calculateAge()">Calculate</button>
+    </div>
+    <div class="result-info">
     <div id="result"></div>
     <div id="zodiacSign"></div>
     <div id="progressBar"></div>
-    <button onclick="shareAge()">Share</button>
+    <button>Share</button>
+    <p class="result"></p>
   </div>
-
+  </div>
   <script src="src/script.js"></script>
 </body>
 </html>

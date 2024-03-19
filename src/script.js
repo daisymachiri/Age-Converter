@@ -1,25 +1,6 @@
-function calculateAge() {
+function calculateAgeAndShare() {
     const nameInput = document.getElementById('name');
     const birthdateInput = document.getElementById('birthdate');
-
-    function shareAge() {
-        const resultText = document.getElementById('result').textContent;
-        
-        // Check if the Web Share API is supported
-        if (navigator.share) {
-            navigator.share({
-                title: 'Age Converter Result',
-                text: resultText,
-                url: window.location.href
-            })
-            .then(() => console.log('Shared successfully'))
-            .catch((error) => console.error('Error sharing:', error));
-        } else {
-            // Fallback for browsers that do not support Web Share API
-            alert('Web Share API is not supported in this browser.');
-        }
-    }
-    
 
     const name = nameInput.value;
     const birthdate = new Date(birthdateInput.value);
@@ -74,8 +55,26 @@ function calculateAge() {
     const zodiacSign = calculateZodiacSign(birthdate.getMonth() + 1, birthdate.getDate());
     resultText += `\nYour zodiac sign is ${zodiacSign}.`;
 
+    // Display result
     const resultDiv = document.getElementById('result');
     resultDiv.textContent = resultText;
+
+    // Share data
+    const shareData = {
+        title: 'Your Age and Zodiac Sign',
+        text: resultText,
+        url: 'https://developer.mozilla.org',
+    };
+
+    navigator.share(shareData)
+        .then(() => {
+            // Display success message
+            resultPara.textContent = 'MDN shared successfully';
+        })
+        .catch((error) => {
+            // Handle error
+            resultPara.textContent = 'Error: ' + error;
+        });
 }
 
 function getMonthName(monthNumber) {
@@ -115,7 +114,7 @@ function calculateZodiacSign(month, day) {
     }
 }
 
-function shareAge() {
-    const resultText = document.getElementById('result').textContent;
-    alert(`Age shared: ${resultText}`);
-}
+// Share data
+const btn = document.querySelector('button');
+const resultPara = document.querySelector('.result');
+btn.addEventListener('click', calculateAgeAndShare);
