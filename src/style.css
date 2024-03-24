@@ -1,5 +1,5 @@
 body {
-  background-color: #fde2e2; /* Soft neutral background color */
+  background-color: #fde2e2;
 }
 .container {
   display: flex;
@@ -11,12 +11,12 @@ body {
   padding: 20px;
 }
 h1 {
-  font-size: 36px; /* Adjust the font size as needed */
-  font-weight: bold; /* Make the text bold */
-  color: #333; /* Set the text color */
-  margin-bottom: 20px; /* Add some space below the heading */
-  text-align: center; /* Center align the heading */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+  font-size: 36px;
+  font-weight: bold;
+  color: #333; 
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -46,7 +46,7 @@ label {
   margin-bottom: 10px;
   font-weight: bold;
   color: #333; 
-  padding-top: 8px;
+  
 }
 
 input[type="text"],
@@ -112,6 +112,10 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  input[type="text"],
+  input[type="date"] {
+    width: calc(100% - 20px); 
+    padding: 8px; }
   .container {
     width: 90%;
     flex-direction: column;
@@ -123,20 +127,24 @@ footer p {
     width: 100%;
     margin-bottom: 20px;
   }
-
+  label {
+    margin-bottom: 6px; 
+  }
   button {
     padding: 10px 20px;
     font-size: 14px;
   }
-
-  input[type="text"],
-  input[type="date"] {
-    width: 100%;
-    margin: 0;
-  }
 }
 
 @media (max-width: 576px) {
+  input[type="text"],
+  input[type="date"] {
+    width: calc(100% - 24px); 
+    padding: 6px; 
+  }
+  label {
+    margin-bottom: 4px; 
+  }
   button {
     padding: 8px 16px;
   }}
